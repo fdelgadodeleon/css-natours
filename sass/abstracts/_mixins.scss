@@ -1,0 +1,8 @@
+// DEPRECATED (use flex or grid instead) --> to fix float elements adding a pseudo element after floats
+@mixin clearfix {
+  &::after {
+    content: ""; // to no show the element
+    display: table;
+    clear: both; // float left and right
+  }
+}
