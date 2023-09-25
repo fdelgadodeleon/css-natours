@@ -6,11 +6,24 @@
   border-radius: $default-border-radius;
   padding: 6rem;
   padding-left: 9rem;
-
   transform: skewX(-12deg);
+
+  @include respond(tab-port) {
+    width: 100%;
+    padding: 4rem;
+    padding-left: 7rem;
+  }
+
+  @include respond(phone) {
+    transform: skewX(0);
+  }
 
   &__text {
     transform: skewX(12deg);
+
+    @include respond(phone) {
+      transform: skewX(0);
+    }
   }
 
   &__shape {
@@ -27,6 +40,10 @@
     // center the image
     display: flex;
     justify-content: center;
+
+    @include respond(phone) {
+      transform: translateX(-3rem) skewX(0);
+    }
   }
   
   &__img {
