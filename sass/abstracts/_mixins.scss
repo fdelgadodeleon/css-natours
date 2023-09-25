@@ -28,7 +28,7 @@
   @if $breakpoint == tab-land {
     @media (max-width:75em) { @content };     // 1200px
   }
-  @if $breakpoint == phone {
+  @if $breakpoint == big-desk {
     @media (min-width:112.5em) { @content };  // 1800px
   }
 }
