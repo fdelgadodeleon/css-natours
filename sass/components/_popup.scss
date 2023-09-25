@@ -32,11 +32,24 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(.25);
     transition: all .5s .2s;
+
+    @include respond (tab-land) {
+      background-image: linear-gradient(
+        to right,
+        rgba($color-white, .8) 0%,
+        rgba($color-white, .8) 100%,
+      ), url(../../img/nat-8.jpg);
+      background-size: cover;
+    }
   }
 
   &__left {
     width: 33.333333333333%;
     display: table-cell;
+
+    @include respond(tab-land) {
+      display: none;
+    }
   }
 
   &__right {
@@ -58,6 +71,10 @@
     column-gap: 4rem;
     column-rule: 1px solid $color-grey-light-2;
     hyphens: auto;
+
+    @include respond(phone) {
+      column-count: 1;
+    }
   }
 
   &__close {
